@@ -13,8 +13,20 @@ import {store} from '../data/store'
   }
 </script>
 <template>
-  <div>
+<div class="text-center my-5 container">
+    
+    <div class="row row-cols-4 mt-4">
+      <Card
+        v-for="card in this.store.cardList"
+        :key="card.id"
+        class="mb-5" 
+        :name="card.name"
+        :price="card.price"
+        :rating="card.rating"
+        :image="card.image"
+        />
 
+    </div>
   </div>
 </template>
 

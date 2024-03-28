@@ -12,6 +12,23 @@ import Main from './components/Main.vue';
       return{
         store,
       }
+    },
+    methods:{
+      getApi(){
+        axios.get(this.store.apiUrl, {
+          params:store.queryParams
+        })
+        .then(result => {
+          this.store.cardList = result.data
+          console.log(this.store.cardList);
+        })
+        .catch(error => {
+          console.log(error);
+        })
+      }
+    },
+    mounted(){
+      this.getApi()
     }
   }
 </script>

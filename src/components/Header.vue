@@ -14,7 +14,7 @@ import {store} from '../data/store'
 </script>
 <template>
   <div>
-
+    <h1 class="text-center">Header</h1>
   </div>
 </template>
 
